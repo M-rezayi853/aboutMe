@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { ReactComponent as CodeIcon } from '../../assets/icons/icomoon (1)/SVG/code1.svg';
-import { ReactComponent as HeartIcon } from '../../assets/icons/icomoon (1)/SVG/heart.svg';
-import { ReactComponent as CoffeeIcon } from '../../assets/icons/icomoon (1)/SVG/coffee.svg';
+import { ReactComponent as CodeIcon } from '../../assets/icons/code1.svg';
+import { ReactComponent as HeartIcon } from '../../assets/icons/heart.svg';
+import { ReactComponent as CoffeeIcon } from '../../assets/icons/coffee.svg';
 import './LastText.scss';
 
 const LastText = () => {
