@@ -31,7 +31,7 @@
 
       .mySelfTop__img {
         transform: scale(1);
-        filter: blur(.3rem) brightness(70%);
+        filter: blur(.1rem) brightness(70%);
       }
     }
 
@@ -149,7 +149,7 @@
       }
 
       @media only screen and (max-width: $bp-small) {
-        width: 12rem;
+        width: 11rem;
       }
     }
   }
