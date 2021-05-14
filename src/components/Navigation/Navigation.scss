@@ -1,0 +1,54 @@
+@import '../../sass/variables.scss';
+
+.navigation {
+  grid-column: 2 / 12;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  list-style: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: $bp-small) {
+    // display: none;
+    grid-column: 1 / -1;
+    font-size: 1rem;
+  }
+
+  // &__logo {
+
+  // }
+
+  // &__items {
+
+  // }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    display: block;
+    color: #aaa;
+    letter-spacing: 5px;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    margin: 0 1rem;
+
+    @media only screen and (max-width: $bp-small) {
+      letter-spacing: 0;
+    }
+
+    &-logo {
+      letter-spacing: 0;
+      font-weight: 500;
+      font-size: 1.7rem;
+      color: #c4c4c4;
+
+      @media only screen and (max-width: $bp-small) {
+        font-weight: 500;
+        font-size: 1rem;
+      }
+    }
+  }
+}

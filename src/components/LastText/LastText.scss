@@ -1,0 +1,37 @@
+@import '../../sass/variables.scss';
+@import '../../sass/animations.scss';
+@include anime;
+
+.lastText {
+  grid-column: full-start / full-end;
+  display: grid;
+  justify-items: center;
+  padding: 2rem 0;
+  font-size: 1.1rem;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1rem;
+  }
+
+  &__description {
+    display: flex;
+    align-items: center;
+    // font-family: $font-display;
+  }
+
+  &__icon {
+    fill: $color-black-light;
+    width: 7rem;
+    margin: 0 1rem;
+
+    &-heart {
+      fill: $color-primary;
+      animation: heartbeat 1.5s infinite;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../sass/variables.scss';
+
+.player {
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+
+    &:hover {
+      .player__icon {
+        fill: $color-primary;
+      }
+    }
+
+    &:focus {
+      .player__icon {
+        fill: $color-primary;
+      }
+    }
+  }
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+    fill: rgb(73, 139, 165);
+    transition: all 0.3s;
+    border-radius: 50rem;
+    box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.2);
+  }
+}

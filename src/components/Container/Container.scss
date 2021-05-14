@@ -1,0 +1,7 @@
+@import '../../sass/variables.scss';
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(4rem, 14rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+  grid-template-rows: repeat(3, min-content);
+}

@@ -1,0 +1,25 @@
+@import '../../sass/variables.scss';
+
+.header {
+  grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  // grid-template-rows: repeat(2 , 1fr);
+
+  min-height: 75vh;
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url('../../assets/hero-aboutme.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  @media only screen and (max-width: $bp-larg) {
+    min-height: 50vh;
+    background-attachment: unset;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    min-height: 30vh;
+    background-attachment: unset;
+  }
+}

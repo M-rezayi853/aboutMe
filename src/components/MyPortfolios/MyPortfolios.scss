@@ -1,0 +1,38 @@
+@import '../../sass/variables.scss';
+
+.myPortfolios {
+  display: grid;
+  text-align: center;
+  margin: 5rem 0;
+  margin-top: 0;
+
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: $font-display;
+    font-style: italic;
+    color: $color-primary;
+    letter-spacing: .3rem;
+    margin: 2rem 0;
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3rem;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+      grid-row-gap: 2rem;
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+}

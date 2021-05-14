@@ -1,0 +1,136 @@
+@import '../../sass/variables.scss';
+
+.mySelfSong {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 2rem 0 5rem;
+
+  @media only screen and (max-width: $bp-very-small) {
+    grid-column: 1 / -1;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: $font-display;
+    font-style: italic;
+    color: $color-primary;
+    letter-spacing: .3rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  &__favText {
+    font-style: italic;
+    display: grid;
+    justify-items: center;
+
+    @media only screen and (max-width: $bp-very-small) {
+      grid-column: 1 / -1;
+      margin: 2rem 0;
+      display: grid;
+      justify-items: center;
+    }
+  }
+
+  &__songs {
+    font-style: italic;
+    display: grid;
+    justify-items: center;
+
+    @media only screen and (max-width: $bp-very-small) {
+      grid-column: 1 / -1;
+      margin: 0;
+      display: grid;
+      justify-items: center;
+    }
+  }
+
+  &__song {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    justify-items: center;
+    margin: 2rem 0;
+    box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.2rem;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-very-small) {
+      justify-items: center;
+    }
+  }
+
+  &__img {
+    width: 34rem;
+    height: 44rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid rgb(160, 160, 160);
+    box-shadow: 0 0.7rem 1rem rgba(0, 0, 0, 0.2);
+
+    @media only screen and (max-width: $bp-very-small) {
+      width: 29rem;
+      height: 39rem;
+    }
+  }
+
+  &__player {
+    display: grid;
+    justify-items: center;
+
+    p {
+      font-size: 1.3rem;
+      padding: 0.5rem 0;
+    }
+  }
+
+  &__box {
+    border: 0.1rem solid #cfcfcf;
+    border-radius: 0.2rem;
+    display: grid;
+    grid-template-columns: minmax(15rem, 1fr);
+    align-content: center;
+    justify-items: center;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+
+    @media only screen and (max-width: $bp-very-small) {
+      grid-template-columns: 1fr;
+    }
+
+    &-1 {
+      border-bottom: none;
+      border-left: none;
+    }
+
+    &-2 {
+      border-left: none;
+    }
+  }
+
+  &__des {
+    display: grid;
+    justify-items: center;
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    text-transform: lowercase;
+    font-style: italic;
+    color: $color-black-light;
+
+    span {
+      box-shadow: 0 0.7rem 1rem rgba(0,0,0,.2);
+      border-radius: .2rem;
+      padding: .2rem .5rem;
+    }
+  }
+
+  &__description {
+    p {
+      color: $color-black-light;
+      font-size: 1.3rem;
+      font-style: italic;
+      letter-spacing: 0.2rem;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+}

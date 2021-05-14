@@ -1,0 +1,162 @@
+@import '../../sass/variables.scss';
+
+.mySelfBottom {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  margin: 5rem 0;
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 2rem 0;
+  }
+  
+  &__me {
+    justify-self: center;
+    position: relative;
+    transition: all .3s;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1 / -1;
+      margin-top: 2rem;
+    }
+
+    &:hover {
+      .mySelfBottom__caption {
+        opacity: 1;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+
+      .mySelfBottom__img {
+        transform: scale(1);
+        filter: blur(.3rem) brightness(70%);
+      }
+    }
+
+    &:active {
+      .mySelfBottom__caption {
+        opacity: .9;
+      }
+
+      .mySelfBottom__img {
+        filter: blur(.1rem) brightness(90%);
+      }
+    }
+
+    img {
+      width: 35rem;
+      border-radius: 50rem;
+      border: .1rem solid #b3b3b3;
+      box-shadow: 0 1rem 2rem #b3b3b3;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media only screen and (max-width: $bp-larg) {
+        width: 33rem;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 32rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        width: 33rem;
+      }
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: #fefefe;
+    text-transform: capitalize;
+    letter-spacing: .3rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;
+    font-family: $font-display;
+  }
+
+  &__other {
+    display: grid;
+    grid-template-rows: 30% 70%;
+    justify-items: center;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__titles {
+    display: grid;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: $color-black;
+    font-family: $font-display;
+
+    &-3 {
+      color: $color-primary;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__favs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+    align-items: center;
+  }
+
+  &__fav {
+    display: grid;
+    grid-row-gap: 2rem;
+
+    img {
+      width: 15rem;
+      border-radius: 50rem;
+      border: .1rem solid #b3b3b3;
+      box-shadow: 0 1rem 2rem #b3b3b3;
+      transition: all .3s;
+
+      &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        @include box-shadow-hover;
+      }
+
+      &:active {
+        transform: translateY(-.1rem);
+        @include box-shadow-active;
+      }
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 13rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        width: 12rem;
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    font-style: italic;
+    box-shadow: 0 .5rem 1rem #c9c9c9;
+    padding: .1rem .5rem;
+  }
+}
